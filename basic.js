@@ -30,6 +30,7 @@ var name3 = "random";
 
 //Arrow functions
 //basic functions */
+/*
 function test() {
   console.log("hello world");
 }
@@ -45,3 +46,167 @@ console.log(sum);
 //arrow function es6
 let name = () => console.log('arrow function');
 name();
+*/
+
+//Javascript outputs
+//alert ("enter your name");
+//prompt("enter your name");
+//console.log(prompt("enter your name")); // it will display in the console.
+
+/*different types of errors (error, warning)
+console.error("I am JS ERROR");
+console.warn("I am JS Warning");
+//normal text
+console.info("JS is normal"); */
+
+//variables declaring with var(Globalscope), let and const(block)
+
+/*if (true){
+  var a="abc";
+  let name="someThing";
+  const place ="someWhere";
+  console.log(a);
+  console.log(name);
+  console.log(place);
+}
+//output abc, something and place
+console.log(a);
+console.log(name);
+console.log(place);
+//const and let are blocklevel scope outside the block we would nt access it
+//output a uncaught ref err for let and const
+*/
+
+/*operators (Arthimatic, assignment equal to is ass opr)
+using assign operator we assign a value to variable, increment value ++
+
+*/
+
+/*let x=10;
+console.log(x++);
+console.log(x);
+//output line 86 10 and line 87 11
+let y=20;
+console.log(++y);
+//decrement
+let z=10;
+console.log(z--);
+console.log(z);
+//same thing line 93 10 and line 94 9
+let p =25;
+console.log(--p);
+console.log(p);
+*/
+
+/* Datatypes primitives and non primitive types
+ number, string, null,boolean, undefined, symbol
+ functions, arrays and objects non primitivies
+
+let name ="peter";
+let age =40;
+let isMarried =true;
+let someValue= null;
+let unassigned;
+
+console.log(typeof(name));
+console.log(typeof(age));
+console.log(typeof(isMarried));
+console.log(typeof(someValue));
+console.log(typeof(unassigned));
+//if we declared a variable and didnot assigned a value by def undefined
+// we should not declare a variable in uppercase
+//js dont have floats and decimals it has only numbers
+//if we check a variable typeof null value is object
+*/
+
+/* strings and methods(length, concat)
+let name = "peter";
+let lastName ="krish"
+console.log(typeof(name));
+console.log(name.length);
+let place="someWhere";
+//concationation method
+console.log("name place" + " "+place);
+console.log(name.concat(lastName));
+//better way of writing concatenation is template literals
+//console.log (`my firstname ${name} and my lastName ${lastName}`;
+console.log(`my firstName ${name} and my ${lastName}`);
+*/
+/*
+//methods we can play around with the strings
+let name ='peter,caleb,justin';
+console.log(name);
+console.log(name.substring(1));
+//output eter,caleb,justin
+console.log(name.substr(1,4));
+//eter(last char is not included)
+console.log(name.substring(1,4));
+//ete (last one is not included )
+console.log(name.split(","));
+//it will display new array of strings
+//(3) ['peter', 'caleb', 'justin']
+console.log(name.replace("caleb","Lind"));
+//peter,lind,justin
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
