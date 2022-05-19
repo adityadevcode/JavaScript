@@ -149,6 +149,193 @@ console.log(name.replace("caleb","Lind"));
 //peter,lind,justin
 */
 
+/*Arrays
+//one way declaring arrays
+let subjects = ['maths','physics','emglish'];
+console.log(subjects);
+//second way of declaring arrays
+const schools = new Array("Joseph","Patrick","Thomas");
+console.log(schools);
+//op:(3) ['Joseph', 'Patrick', 'Thomas']*/
+
+//to access array values
+/*
+let names=new Array("sam","peter","kevin","keal");
+console.log(names);
+console.log(names[1]);//pe
+console.log(names[3]);//ke
+//if item is not there in array it will give undefined
+console.log(names[5]);//undefined
+//change the value of 1 index then
+names[1]='Andrew';
+console.log(names);
+(4) ['sam', 'Andrew', 'kevin', 'keal']
+
+//Array Methods (length of array,sort)
+console.log(names.length);
+//4
+console.log(names.sort());
+//(4) ['Andrew', 'keal', 'kevin', 'sam']
+
+//to remove elements from array pop(removes last element)
+console.log(names.pop());
+//sam
+
+//to remove first element shift
+console.log(names.shift());
+//andrew (here see code flow you can understand)
+
+//to add element at last push
+let places =["A","B","C","D"];
+console.log(places.push('E'));
+console.log(places);
+(5) ['A', 'B', 'C', 'D', 'E']
+
+//to add element at start unshift
+let places1 =["A","B","C","D"];
+console.log(places1.unshift('Z'));
+console.log(places1);
+(5) ['Z', 'A', 'B', 'C', 'D']
+
+/*if we want to check typeof Array it is always will give Obj because 
+both are primitive types they will always refer to obj
+-if you want check if it is array we have other method of checking
+
+console.log(Array.isArray(places1)); 
+//true
+//another way is to check instance of framework
+console.log(places1 instanceof Array);
+//true
+*/
+
+//objects in Js
+/*empty obj
+const temp ={}
+console.log(temp);
+//{}
+console.log(typeof temp);
+//obj
+
+//obj literal in js
+let name = {
+  place:"xyz",
+  location:"somewhere",
+  age:23
+}
+console.log(name);
+//{place: 'xyz', location: 'somewhere', age: 23}
+console.log(typeof name);
+//obj
+*/
+
+//objects addressed inside of an obj and array as well
+const firstName = {
+  surname:'something',
+  family:'something',
+  age:34,
+  nationality:{
+location:'something',
+path:'correct',
+value:{
+  age:13,
+  gender:'male'
+},
+skills:["a","b","c"],
+  }
+}
+
+console.log(firstName);
+/*{surname: 'something', family: 'something', age: 34, nationality: {…}}
+age: 34
+family: "something"
+nationality: {location: 'something', path: 'correct', value: {…}}
+surname: "something"
+[[Prototype]]: Object
+*/
+
+ let name=firstName;
+ console.log(name);
+ /*
+ {surname: 'something', family: 'something', age: 34, nationality: {…}}
+basic.js:256 {surname: 'something', family: 'something', age: 34, nationality: {…}}
+*/
+
+//access obj properties
+console.log(name.surname);
+//something
+console.log(name.nationality);
+//{location: 'something', path: 'correct', value: {…}, skills: Array(3)}
+console.log(name.nationality.path);
+//correct
+console.log(name.skills[1]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
