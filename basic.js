@@ -432,6 +432,8 @@ console.log(empArray);
 length: 3
 */
 
+//Loops (for loop, while loop)
+
 
 
 
