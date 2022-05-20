@@ -228,7 +228,7 @@ console.log(typeof name);
 //obj
 */
 
-//objects addressed inside of an obj and array as well
+/*objects addressed inside of an obj and array as well
 const firstName = {
   surname:'something',
   family:'something',
@@ -253,12 +253,12 @@ surname: "something"
 [[Prototype]]: Object
 */
 
- let name=firstName;
+/*let name=firstName;
  console.log(name);
  /*
  {surname: 'something', family: 'something', age: 34, nationality: {…}}
 basic.js:256 {surname: 'something', family: 'something', age: 34, nationality: {…}}
-*/
+
 
 //access obj properties
 console.log(name.surname);
@@ -268,35 +268,169 @@ console.log(name.nationality);
 console.log(name.nationality.path);
 //correct
 console.log(name.skills[1]);
+*/
 
+/*object solution for above thing
+const secondName = {
+  surname: "something",
+  family: "something",
+  age: 34,
+  nationality: {
+    location: "something",
+    path: "correct",
+  },
+  skills: ["a", "b", "c"],
+  price:{
+    lower: "something",
+    upper: "something",
+  },
+  rates:[1,2,3],
+};
 
+console.log(secondName);
+console.log(secondName.nationality);
+console.log(secondName.skills);
+console.log(secondName.skills[1]);
+console.log(secondName.price);
+console.log(secondName.rates);
+*/
 
+/*methods in objects are called function, in order to use methods we need to use this
 
+let firsMethod = {
+  name: "hi",
+  age: 19,
+  lastName: {
+    place: "soe",
+    country: "local",
+  },
+  some: ["a", "b", "c"],
+  welcome: [1, 2, 3],
+  fullDetails: function(){
+    console.log(this);
+    return`${this.name} this is my age${this.age}`;
+  },
+};
 
+console.log(firsMethod.fullDetails());
+//hi this is my age19
+console.log(firsMethod.lastName.place);
+//soe
+console.log(this);
+//this one will give window object
+//310 console(This)function refers to entire object 
+*/
 
+//another way of accessing methods using destructure
+/*ES6 Destructuring 
+let color = {
+  name:'wish',
+  age:23,
+  cod:'read',
+}
 
+console.log(color);
+let{name,age,cod} =color;
+console.log(name,age,cod);
+*/
 
+//array of objects (in real time we receive array of name like this)
+//you will pick the values and display in html
+/*
+let employee = [
+  {
+    id:101,
+    name:'wisj',
+    place:'till',
+  },
+  {
+    id:101,
+    name:'wikk',
+    place:'tilp',
+  },
+  {
+    id:102,
+    name:'sj',
+    place:'tiy',
+  },
+]
 
+console.log(employee);
+/*(3) [{…}, {…}, {…}]
+0: {id: 101, name: 'wisj', place: 'till'}
+1: {id: 101, name: 'wikk', place: 'tilp'}
+2: {id: 102, name: 'sj', place: 'tiy'}
+length: 3
+[[Prototype]]: Array(0)
 
+//to access first obj
+console.log(employee[0],[2]);
+//{id: 101, name: 'wisj', place: 'till'} [2]
+console.log(employee[1].name);
+//wikk
+*/
 
+//adding an obj and array below
 
+let employee1 = [
+  {
+    id:101,
+    name:'wisj',
+    place:'till',
+  },
+  {
+    id:101,
+    name:'wikk',
+    place:'tilp',
+  },
+  {
+    id:102,
+    name:'sj',
+    place:'tiy',
+    address : {
+      place:"new",
+    },
+    skills:['html','css','js'],
+  },
+];
 
+console.log(employee1);
+/*
+(3) [{…}, {…}, {…}]
+0: {id: 101, name: 'wisj', place: 'till'}
+1: {id: 101, name: 'wikk', place: 'tilp'}
+2: {id: 102, name: 'sj', place: 'tiy', address: {…}, skills: Array(3)}
+length: 3
+[[Prototype]]: Array(0)
+*/
+console.log(employee1[2].address);
+//{place: 'new'}
+console.log(employee1[2].skills[1]);
+//css
 
+//we will not send js objects to server we will use json obj
+//we will stringify this
+const ployJson = JSON.stringify(employee1 );
+console.log(ployJson);
+//our object is stringified we can send to back end
+/*
+[{"id":101,"name":"wisj","place":"till"},
+{"id":101,"name":"wikk","place":"tilp"},
+{"id":102,"name":"sj","place":"tiy","address":
+{"place":"new"},"skills":["html","css","js"]}]
 
+//above code you will send to server, but when you will receive data from backend
+//we need to convert array of objects(json parse)*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+const empArray = JSON.parse(ployJson);
+console.log(empArray);
+/*
+(3) [{…}, {…}, {…}]
+0: {id: 101, name: 'wisj', place: 'till'}
+1: {id: 101, name: 'wikk', place: 'tilp'}
+2: {id: 102, name: 'sj', place: 'tiy', address: {…}, skills: Array(3)}
+length: 3
+*/
 
 
 
